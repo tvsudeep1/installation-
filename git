@@ -1,0 +1,45 @@
+
+============================================================================
+# Install Git
+sudo yum install -y git
+echo 'export PATH="$PATH:/usr/bin/git"' >> ~/.bashrc
+source ~/.bashrc
+
+mkdir git 
+git init 
+
+===========================================================================
+
+Add folling lines on .git/config file
+
+================================================================
+[remote "origin"]
+        url = https://github.com/#####/installation-.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+        remote = origin
+        merge = refs/heads/master
+[user]
+        name = #####
+        email = #####
+=======================================================================
+Execute folloing commands on system-
+
+  eval "$(ssh-agent -s)"
+  git config --global user.name "tvsudeep1"
+  git config --global user.email "tvsudeep1@gmail.com"
+============================================================================
+
+		
+git clone git@github.com:####/installation-.git
+On system - Create File and follow the below steps to add repo
+================================================================================
+git status
+git checkout -b installation
+git status
+git add awscli
+git commit -am "awscli installtion"
+git push -u origin installation
+
+===============================================================================
+go to github console - create pull request - Merge to Main branch
